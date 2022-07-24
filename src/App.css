@@ -1,38 +1,251 @@
-.App {
-  text-align: center;
+@font-face {
+  src: url("../Fonts/BebasNeue-Regular.ttf") format("TrueType");
+  font-family: "ver";
+}
+:root {
+  --primary-color: 
+  --secondary-color:
+  --tertiary-color:
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  font-family: ver;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+header {
+  margin-left: 12%;
+  width: 75%;
+  padding: 20px 35px;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  top: 0;
+  border-bottom: 3px solid;
+  
+}
+
+header h1 {
+  font-weight: bold;
+  font-size: 36px;
+  margin: 0;
+}
+header nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  list-style: none;
+}
+header nav ul li {
+  padding-top: 12px;
+}
+header nav ul li a {
+  margin: 0 20px;
+  font-weight: lighter;
+  font-size: 1.00vw;
+  text-decoration: none;
+  color: black;
+  font-family: ver;
+}
+.contact-me-button {
+  background-color: #ffc727;
+  border: none;
+  padding: 2px;
+  border-radius: 10px;
+  width: 123px;
+  height: 25px;
+}
+.contact-me-button a{
   color: white;
+  font-weight: bold;
+  margin-top: 10px;
+}
+.about {
+  margin-bottom: 100px;
+  color: black;
+}
+.about h2 {
+  margin-left: 25%;
+  margin-top: 5%;
+  font-size: 68px;
+}
+.about p {
+  margin-left: 28%;
+  margin-top: 1%;
+  font-size: 30px;
+  width: 450px;
+}
+.image-icon {
+  position: absolute;
+  padding: 30px;
+  
+  width: 300px;
+  height: 300px;
+  margin-left: 60%;
+  margin-top: -15%;
+  background-image: url(../images/IMG_3810.PNG);
+  background-size: cover;
+  
+}
+.portfolio h2 {
+  margin-left: 15%;
+  margin-top: 5%;
+  font-size: 48px;
+}
+.portfolio-works button{
+  background-color: #ffc727;
+  border: none;
+  width: 350px;
+  height: 500px;   
+  margin-right: 11.5px;
+  margin-left: 15px;
+  border-radius: 10px;
+}
+.border-divison {
+  display: inline;
+  position: absolute;
+  background-color: orange;
+  border: 1px black solid;
+  border-radius: 10px;
+  margin-top: 110px;
+  height: 300px;
+}
+.contact-me {
+  margin-bottom: 100px;
+}
+.contact-me h2 {
+  margin-left: 15%;
+  margin-top: 5%;
+  font-size: 48px;
+}
+.contact-info {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-left: 30%;
+  margin-top: 30px;
+}
+.contact-info a {
+  padding: 10px 50px;
+  font-size: 24px;
+  border: none;
+  margin-top: 20px;
+  text-decoration: none;
+  padding: 0px 30px;
+  color: #ffc727;
+  border-bottom: 3px solid black;
 }
 
-.App-link {
-  color: #61dafb;
+@media screen and (max-width: 980px) {
+  .image-icon {
+      margin-left: 70%;
+      margin-top: -25%;
+  }
+  header nav ul li a {
+      font-size: 2vw;
+  }
+  .portfolio {
+      margin-left: 10%;
+  }
+  .portfolio-works button{
+      margin-bottom: 10px;
+  }
+  .contact-info {
+      margin-left: 13%;
+  }
+  .contact-info a {
+      padding: 10px 50px;
+      padding: 0px 20px;
+  }
 }
+@media screen and (max-width: 768px) {
+  .about h2 {
+      flex-wrap: wrap;
+      margin-left: 15%;
+      margin-top: 5%;
+      font-size: 60px;
+  }
+  .about p {
+      margin-left: 16%;
+  }
+  header nav ul li a {
+      font-size: 2vw;
+      margin-left: 25px;
+  }
+  .image-icon {
+      width: 200px;
+      height: 200px;
+      margin-top: -35%;
+      margin-left: 70%;
+  }
+  .portfolio-works button{
+      margin-bottom: 10px;
+  }
+  .contact-info {
+      margin-left: 13%;
+  }
+  .contact-info a {
+      padding: 10px 100px;
+      padding: 0px 15px;
+  }
+}
+  
+@media screen and (max-width: 575px) {
+  .image-icon {
+      width: 200px;
+      height: 200px;
+      margin-top: -50%;
+      margin-left: 90%;
+  }
+  .about {
+      margin-bottom: 25px;
+  }
+  .about h2 {
+      flex-wrap: wrap;
+      margin-left: 100px;
+      margin-top: 5%;
+      font-size: 60px;
+  }
+  .about p {
+      margin-left: 20%;
+  }
+  header {
+      margin-left: 150px;
+  }
+  header h1 {
+      margin-left: 60px;
+  }
+  header nav ul li a {
+      font-size: 3vw;
+      margin-left: 25px;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
   }
-  to {
-    transform: rotate(360deg);
+  .portfolio {
+      margin-left: 30%;
   }
+  .portfolio h2 {
+      margin-left: 100px;
+  }
+  .portfolio-works button{
+      margin-bottom: 10px;
+  }
+  .border-divison {
+      display: none;
+  }
+  .contact-info {
+      margin-left: 15%;
+  }
+  .contact-info a {
+      padding: 10px 50px;
+      padding: 0px 20px;
+  }
+}
+#boredandhungry {
+  background-image: url("../images/bored&hungry.PNG");
+  background-size: cover;
+  background-position-x: center;
 }
