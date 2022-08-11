@@ -11,10 +11,10 @@ elevates its potential to attract the attention of future employees.
 * React
 
 ## Image
-
+![Capture](https://user-images.githubusercontent.com/100795164/184203194-9504ee64-b20a-4a0b-ae16-52858d5c21a3.PNG)
 
 ## Link to Application
-
+https://hdezb.github.io/react-portfolio/#about
 
 ## Contribution
 Made by Brian Hernandez
