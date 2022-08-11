@@ -32,28 +32,28 @@ export default function Contact() {
     };
 
     return (
-        <section class="contact-me" id="contact-me">
-            <h2>Contact Me</h2>
-            <form class="contact-info" onSubmit={HandleSubmit}>
+        <section>
+        <h1 data-testid='h1tag'>Contact me</h1>
+        <form id="contact-form" onSubmit={HandleSubmit}>
+            <div>
+                <label htmlFor='name'>Name:</label>
+                <input type="text" defaultValue={name} onBlur={HandleChange} name="name" />
+            </div>
+            <div>
+                <label htmlFor='email'>Email address:</label>
+                <input type="email" defaultValue={email} onBlur={HandleChange} name="email" />
+            </div>
+            <div>
+                <label htmlFor='message'>Message:</label>
+                <textarea name="message" defaultValue={message} onBlur={HandleChange} row="5" />
+            </div>
+            {errorMessage && (
                 <div>
-                    <label htmlFor='name'>Name:</label>
-                    <input type="text" defaultValue={name} onBlur={HandleChange} name="name" />
+                    <p className='error-text'>{errorMessage}</p>
                 </div>
-                <div>
-                    <label htmlFor='email'>Email address:</label>
-                    <input type="email" defaultValue={email} onBlur={HandleChange} name="email" />
-                </div>
-                <div>
-                    <label htmlFor='message'>Message:</label>
-                    <textarea name="message" defaultValue={message} onBlur={HandleChange} row="5" />
-                </div>
-                {errorMessage && (
-                    <div>
-                        <p className='error-text'>{errorMessage}</p>
-                    </div>
-                )}
-                <button data-testid="button" type='submit'>Submit</button>
-            </form>
-        </section>
+            )}
+            <button data-testid="button" type='submit'>Submit</button>
+        </form>
+    </section>
     )
 }

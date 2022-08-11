@@ -17,6 +17,7 @@ export default function Container() {
         if(currentPage === 'Contact') {
             return <Contact />
         }
+        return <About />
     };
 
     const handlePageChange = (page) => setCurrentPage(page);
